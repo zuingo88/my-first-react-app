@@ -1,5 +1,6 @@
 import Componente1 from './Componente1'
 import Componente2 from './Componente2'
+import Product from './Product'
 
 function App() {
   return (
@@ -7,6 +8,16 @@ function App() {
       <h1>Hello World!</h1>
       <Componente1 />
       <Componente2 />
+
+      <section className='card-container'>
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+        <Product />
+      </section>
     </div>
   );
 }

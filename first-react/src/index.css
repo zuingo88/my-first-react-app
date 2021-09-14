@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +16,44 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.card-container {
+  width: 1000px;
+  margin: auto;
+  /* padding: 10px; */
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 230px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px black;
+  border-radius: 10px;
+}
+
+.card * {
+  margin: 5px;
+}
+
+.card .preview {
+  height: 60px;
+  width: 90px;
+  background-color: crimson;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+.card button {
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+
 }
