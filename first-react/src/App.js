@@ -20,22 +20,6 @@ const pStyle = {
   textTransform: 'uppercase'
 }
 
-// const Product = (props) => {
-
-//   console.log(props);
-
-//   return (
-//     <div className='card'>
-//       <h4>{props.nome}</h4>
-//       <h5>{props.prezzo} €</h5>
-//       <div className="preview">{props.immagine}</div>
-//       <p style={pStyle}>{props.disponibilita}</p>
-//       <p>{'LOWERCASE'.toLowerCase()}</p>
-//       <button>Acquista</button>
-//     </div>
-//   )
-// }
-
 function App() {
   return (
     <div className="App">
@@ -66,10 +50,16 @@ function App() {
           const numeri = [1,2,3,4,5,6,7,8,9];
           console.log(Math.max(...numeri));  // -> 9 
         */}
-
         <Product
           {...primaCard}
         />
+
+        {/* Utilizzo props.children aggiungendo un react.fragment tra l'apertura e la chiusura del Product */}
+        <Product {...secondaCard}>
+          <>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet non architecto veritatis itaque quos enim quia facere nam est tenetur!
+          </>
+        </Product>
 
       </section>
     </div>

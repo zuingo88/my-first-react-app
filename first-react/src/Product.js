@@ -12,7 +12,7 @@ const pStyle = {
 
 // OPPURE destrutturo props
 
-const Product = ({ nomeProdotto, prezzoProdotto, immagine, disponibilita }) => {
+const Product = ({ nomeProdotto, prezzoProdotto, immagine, disponibilita, children }) => {
 
 
   return (
@@ -20,6 +20,7 @@ const Product = ({ nomeProdotto, prezzoProdotto, immagine, disponibilita }) => {
       <h4>{nomeProdotto}</h4>
       <h5>{prezzoProdotto} €</h5>
       <div className="preview">{immagine}</div>
+      <p>{children}</p>
       <p style={pStyle}>{disponibilita}</p>
       <p>{'LOWERCASE'.toLowerCase()}</p>
       <button>Acquista</button>
