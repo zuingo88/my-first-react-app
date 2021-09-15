@@ -47,17 +47,28 @@ function App() {
       <section className='card-container'>
 
         <Product
-          nome={primaCard.nomeProdotto}
-          prezzo={primaCard.prezzoProdotto}
+          nomeProdotto={primaCard.nomeProdotto}
+          prezzoProdotto={primaCard.prezzoProdotto}
           immagine={primaCard.immagine}
           disponibilita={primaCard.disponibilita}
         />
 
         <Product
-          nome={secondaCard.nomeProdotto}
-          prezzo={secondaCard.prezzoProdotto}
+          nomeProdotto={secondaCard.nomeProdotto}
+          prezzoProdotto={secondaCard.prezzoProdotto}
           immagine={secondaCard.immagine}
           disponibilita={secondaCard.disponibilita}
+        />
+
+        {/* 
+          Utilizzo lo spread operator per passare tutte le coppie chiave-valore. 
+          Esempio di utlizzo spread operator:
+          const numeri = [1,2,3,4,5,6,7,8,9];
+          console.log(Math.max(...numeri));  // -> 9 
+        */}
+
+        <Product
+          {...primaCard}
         />
 
       </section>
