@@ -1,6 +1,7 @@
 import Componente1 from './Componente1'
 import Componente2 from './Componente2'
 import Product from './Product'
+import prodotti from './prodotti'
 
 const primaCard = {
   nomeProdotto: 'primoNome',
@@ -15,22 +16,6 @@ const secondaCard = {
   immagine: 'seconda immagine',
   disponibilita: 'non disponibile'
 }
-
-// Metto i prodotti in un array
-const prodotti = [
-  {
-    nomeProdotto: 'terzoNome',
-    prezzoProdotto: '3',
-    immagine: 'terza immagine',
-    disponibilita: 'non disponibile'
-  },
-  {
-    nomeProdotto: 'quartoNome',
-    prezzoProdotto: '4',
-    immagine: 'quarta immagine',
-    disponibilita: 'disponibile'
-  }
-]
 
 const pStyle = {
   textTransform: 'uppercase'
@@ -77,11 +62,11 @@ function App() {
           </>
         </Product>
 
-        {/* stampo gli oggetti contenuti nell'array 'prodotti' con il map method */}
+        {/* ritorno dinamicamente gli oggetti contenuti nell'array 'prodotti' con il map method */}
         {prodotti.map((prodotto) => {
           console.log(prodotto, 'prodotto stampato con map method');
 
-          return <Product {...prodotto} />
+          return <Product key={prodotto.id} {...prodotto} />
         })}
 
       </section>
