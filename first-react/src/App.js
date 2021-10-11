@@ -16,6 +16,22 @@ const secondaCard = {
   disponibilita: 'non disponibile'
 }
 
+// Metto i prodotti in un array
+const prodotti = [
+  {
+    nomeProdotto: 'terzoNome',
+    prezzoProdotto: '3',
+    immagine: 'terza immagine',
+    disponibilita: 'non disponibile'
+  },
+  {
+    nomeProdotto: 'quartoNome',
+    prezzoProdotto: '4',
+    immagine: 'quarta immagine',
+    disponibilita: 'disponibile'
+  }
+]
+
 const pStyle = {
   textTransform: 'uppercase'
 }
@@ -60,6 +76,13 @@ function App() {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet non architecto veritatis itaque quos enim quia facere nam est tenetur!
           </>
         </Product>
+
+        {/* stampo gli oggetti contenuti nell'array 'prodotti' con il map method */}
+        {prodotti.map((prodotto) => {
+          console.log(prodotto, 'prodotto stampato con map method');
+
+          return <Product {...prodotto} />
+        })}
 
       </section>
     </div>
